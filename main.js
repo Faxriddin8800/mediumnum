@@ -1,15 +1,12 @@
-var num1 = +prompt("Birinchi raqamni kiriting")
-var num2 = +prompt("Ikkinch raqamni kiriting")
-var num3 = +prompt("Uchunchi raqamni kiriting")
-a = num1
-b = num2
-c = num3
-if (a < b < c){
-    alert( num2 + " O'rta raqam shu !")
-}else if(b < a < c){
-    alert( num1 + " O'rta raqam shu !")
-}else if(b < c < a){
-    alert( num3 + " O'rta raqam shu !")
-}else{
-    alert("nimadir xato")
+var a = +prompt("Birnchi raqamni kiriting")    
+var b = +prompt("Ikkinchi raqamni kiriting")
+var c = +prompt("Uchinchi raqamni kiritin")
+if((a > b && c > a) || (a > c && a < b)){
+    alert(a + " O'rta raqam shu");
+}else if ((a < b && c > b) || (b > c && a > b)) {
+    alert(b + " O'rta raqam shu");
+}else if((a < c && c < b) || (b < c && a > c)){
+    alert(c + " O'rta raqam shu");
+}else {
+    alert('Nimadir xato')
 }
